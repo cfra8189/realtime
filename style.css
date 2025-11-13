@@ -1,11 +1,12 @@
 body {
+  background-color: lightgrey;
   font-family: sans-serif; /* display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f4f4f4; */
 }
-.container-signup-form {
+ #myForm {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.1);
   width: 350px;
   margin: 20px auto;
 }
