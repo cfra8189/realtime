@@ -21,3 +21,13 @@ This is the key, a unique label given to the saved data (similar to a file name)
 
 nameInput.value	
 This is the value, the text the user entered into the input box on the webpage.
+
+
+====Console====
+const nameInput = document.getElementById('name');
+undefined
+sessionStorage.setItem('signup_name', nameInput.value); 
+undefined
+sessionStorage.getItem('signup_name')
+'cfra8189'
+

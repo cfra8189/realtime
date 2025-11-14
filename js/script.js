@@ -23,5 +23,8 @@ myForm.addEventListener('submit', function (event) {
 });
 
 function saveForm() {
-    sessionStorage.setItem("signup_name', nameInput.value);
+    sessionStorage.setItem("signup_name", nameInput.value);
+    sessionStorage.setItem("signup_email", email.value);
+    sessionStorage.setItem("signup_password", password.value);
+    sessionStorage.setItem("signup_confirmPassword", confirmPassword.value);
 }
