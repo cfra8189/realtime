@@ -48,3 +48,28 @@ if (!nameInput.validity.valid) {
     nameInput.focus();
     return;
     }
+
+Pass Validation
+
+console.log('Form submitted successfully!')
+
+alert(`Form submitted! Thank you, ${nameInput.value`})
+
+
+Kept getting an error until I changed 
+
+const myForm = document.getElementById("myForm"); 
+
+to:
+
+const signupForm = document.getElementById("signupForm"); 
+
+and this
+
+const formData = new FormData(myForm);
+
+to:
+
+const formData = new FormData(signupForm);
+
+Things went left.....
