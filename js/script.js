@@ -21,3 +21,7 @@ myForm.addEventListener('submit', function (event) {
   // e.g., fetch('/submit-form', { method: 'POST', body: formData });
   myForm.reset(); // Optionally reset the form
 });
+
+function saveForm() {
+    sessionStorage.setItem("signup_name', nameInput.value);
+}
