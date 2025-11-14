@@ -77,5 +77,10 @@ emailInput.addEventListener('input', saveForm)
 passwordInput.addEventListener('input', saveForm)
 confirmPasswordInput.addEventListener('input', saveForm)
 
+nameInput.addEventListener('input', () => clearError(nameInput))
+emailInput.addEventListener('input', () => clearError(emailInput))
+passwordInput.addEventListener('input', () => clearError(passwordInput))
+confirmPasswordInput.addEventListener('input', () => clearError(confirmPasswordInput))
+
 
 

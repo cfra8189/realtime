@@ -73,3 +73,7 @@ to:
 const formData = new FormData(signupForm);
 
 Things went left.....
+
+
+Clear errors didn't work....
+
