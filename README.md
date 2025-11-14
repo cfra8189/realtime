@@ -34,3 +34,12 @@ sessionStorage.getItem('signup_name')
 creating loadForm(){
     sessionStorage.getItem('signup_name');
 }
+
+added if statements to check if there's anything from the input and if there is, it will save the nameInput.value as savedName.
+
+if (savedName) nameInput.value = savedName;
+
+added event listeners to all input to save data
+
+nameInput.addEventListener('input', saveForm)
+
