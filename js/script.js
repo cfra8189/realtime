@@ -4,8 +4,20 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 
-myForm.addEventListener("submit", function (event) {
+
+function clearError(inputElement) {
+  inputElement.classList.remove('invalid');
+  inputElement.classList.remove('valid');
+}
+
+
+signupForm.addEventListener("submit", function (event) {
   event.preventDefault();
+
+  clearError(nameInput);
+  clearError(emailInput);
+  clearError(passwordInput);
+  clearError(confirmPasswordInput);
 
   if (!nameInput.validity.valid) {
     alert("Please enter your name.");
@@ -65,8 +77,5 @@ emailInput.addEventListener('input', saveForm)
 passwordInput.addEventListener('input', saveForm)
 confirmPasswordInput.addEventListener('input', saveForm)
 
-signupForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-})
 
 
