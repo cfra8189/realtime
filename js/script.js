@@ -10,22 +10,26 @@ myForm.addEventListener("submit", function (event) {
   if (!nameInput.validity.valid) {
     alert("Please enter your name.");
     nameInput.focus();
+    nameInput.classList.add('invalid');
     return;
   }
 
   if (!emailInput.validity.valid) {
     alert('Please enter a valid email');
-    email.focus();
+    emailInput.focus();
+    emailInput.classList.add('invalid');
     return;
   }
   if (!passwordInput.validity.valid) {
     alert('Please enter a valid password.');
     passwordInput.focus();
+    passwordInput.classList.add('invalid');
     return;
   }
   if (passwordInput.value !== confirmPasswordInput.value) {
     alert('Passwords do not match.');
-    confirmPassword.focus();
+    confirmPasswordInput.focus();
+    confirmPasswordInput.classList.add('invalid');
     return;
   }
 
@@ -50,10 +54,10 @@ function loadForm() {
   const savedPassword = sessionStorage.getItem('signup_password');
   const savedConfirmPassword = sessionStorage.getItem('signup_confirmpassword');
 
-  if (savedName) name.value = savedName;
-  if (savedEmail) email.value = savedEmail;
-  if (savedPassword) password.value = savedPassword;
-  if (savedConfirmPassword) confirmPassword.value = savedConfirmPassword;
+  if (savedName) nameInput.value = savedName;
+  if (savedEmail) emailInput.value = savedEmail;
+  if (savedPassword) passwordInput.value = savedPassword;
+  if (savedConfirmPassword) confirmPasswordInput.value = savedConfirmPassword;
 }
 
 nameInput.addEventListener('input', saveForm)
