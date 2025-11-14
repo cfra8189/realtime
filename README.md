@@ -31,3 +31,6 @@ undefined
 sessionStorage.getItem('signup_name')
 'cfra8189'
 
+creating loadForm(){
+    sessionStorage.getItem('signup_name');
+}
