@@ -39,7 +39,12 @@ added if statements to check if there's anything from the input and if there is,
 
 if (savedName) nameInput.value = savedName;
 
-added event listeners to all input to save data
+added event listeners to all input to save data and validation to the inputs
 
 nameInput.addEventListener('input', saveForm)
 
+if (!nameInput.validity.valid) {
+    alert('Please enter a valid username.');
+    nameInput.focus();
+    return;
+    }

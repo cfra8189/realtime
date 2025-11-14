@@ -46,3 +46,29 @@ emailInput.addEventListener('input', saveForm)
 passwordInput.addEventListener('input', saveForm)
 confirmPassword.addEventListener('input', saveForm)
 
+myForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+
+  if (!nameInput.validity.valid) {
+    alert('Please enter a valid username.');
+    nameInput.focus();
+    return;
+  }
+  if (!emailInput.validity.valid) {
+    alert('Please enter a valid email');
+    emailInput.focus();
+    return;
+  }
+  if (!passwordInput.validity.valid) {
+    alert('Please enter a valid password.');
+    passwordInput.focus();
+    return;
+  }
+  if (passwordInput !== confirmPassword) {
+    alert('No match.');
+    confirmPassword.focus();
+    return;
+  }
+
+});
