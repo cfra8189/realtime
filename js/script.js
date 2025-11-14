@@ -41,3 +41,8 @@ function loadForm() {
   if (savedConfirmPassword) confirmPasswordInput.value = savedConfirmPassword;
 }
 
+nameInput.addEventListener('input', saveForm)
+emailInput.addEventListener('input', saveForm)
+passwordInput.addEventListener('input', saveForm)
+confirmPassword.addEventListener('input', saveForm)
+
